@@ -72,8 +72,7 @@ def output_result(department_data, output_file):
             )
             output.writelines(str_price)
 
-
-if __name__ == "__main__":
+def main():
     # check input parameters
     if len(sys.argv) < 4:
         print("please input: purchase_analytics.py input_file1 input_file2 output_file")
@@ -89,3 +88,6 @@ if __name__ == "__main__":
     department_data = process_orders(product_department_map, order_products_file)
 
     output_result(department_data, output_file)
+
+if __name__ == "__main__":
+    main()
